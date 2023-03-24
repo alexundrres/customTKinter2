@@ -7,8 +7,8 @@ import customtkinter
 # from openpyxl import Workbook, load_workbook
 
 
-customtkinter.set_appearance_mode("dark")  # Modes: "System" (standard), "Dark", "Light"
-customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
+customtkinter.set_appearance_mode("dark")  # "System", "Dark", "Light"
+customtkinter.set_default_color_theme("blue")  # "blue", "green", "dark-blue"
 
 
 # Получение информации из первой таблицы в бд
@@ -380,10 +380,6 @@ mainmenu.add_cascade(label="Выгрузка из бд",
                      menu=frombd_menu)
 frombd_menu.add_command(label='В Excel', command=db_to_excel)
 
-# Добавление кнопки "Изменить Имя" в контекстное меню / пока не работает
-#mainmenu.add_command(label='Изменить Имя (не работает)', command=menu_change_name)
-
-
 # добавления новых имен в бд
 l_name = customtkinter.CTkLabel(master=frame_change, text="Имя", text_color="black")
 f_name = customtkinter.CTkEntry(frame_change, width=130, fg_color="darkgray")
@@ -403,8 +399,6 @@ l_change.grid(row=3, column=0, sticky='w', padx=10, pady=10)
 f_change.grid(row=3, column=1, sticky='w', padx=10, pady=10)
 
 #  кнопка добавить
-# btn_submit = ttk.Button(frame_change, text="Добавить", command=form_submit)
-# btn_submit.grid(row=0, column=3, columnspan=2, sticky='w', padx=10, pady=10)
 btn_submit = customtkinter.CTkButton(master=frame_change, text="Добавить", command=form_submit, text_color="black", fg_color="darkgray")
 btn_submit.grid(row=0, column=3, columnspan=2, sticky='w', padx=10, pady=10)
 
